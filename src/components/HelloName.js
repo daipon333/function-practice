@@ -1,5 +1,4 @@
 import React from "react";
-import reactDom from "react-dom";
 
 function HelloName() {
   const [name, setName] = React.useState("daisuke");
@@ -8,10 +7,15 @@ function HelloName() {
     setName(e.target.value);
   };
   return (
-    <div>
-      <h1>Hello.{name}</h1>
-      <input value={name} onChange={handleChange} />
-    </div>
+    <>
+      <div className="inputContainer">
+        <h2>↓inputの値を表示↓</h2>
+        <div className="inputContaint">
+          <h1>Hello.{name}</h1>
+          <input value={name} onChange={handleChange} />
+        </div>
+      </div>
+    </>
   );
 }
 

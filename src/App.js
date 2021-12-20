@@ -1,9 +1,14 @@
 import React from "react";
 import HelloName from "./components/HelloName";
-import reactDom from "react-dom";
+import RadioButton from "./components/RadioButton";
 
 function App() {
-  return <HelloName />;
+  return (
+    <>
+      <HelloName />
+      <RadioButton />
+    </>
+  );
 }
 
 export default App;

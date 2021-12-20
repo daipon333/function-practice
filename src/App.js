@@ -1,9 +1,9 @@
+import React from "react";
+import HelloName from "./components/HelloName";
+import reactDom from "react-dom";
+
 function App() {
-  return (
-    <div>
-      <h1>Hello</h1>
-    </div>
-  );
+  return <HelloName />;
 }
 
 export default App;

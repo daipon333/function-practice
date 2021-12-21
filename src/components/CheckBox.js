@@ -1,7 +1,7 @@
 import React from "react";
 
 function CheckBox() {
-  const [val, setVal] = React.useState(["js"]);
+  const [val, setVal] = React.useState([""]);
   const handleChange = (e) => {
     if (val.includes(e.target.value)) {
       setVal(val.filter((item) => item !== e.target.value));
@@ -13,32 +13,42 @@ function CheckBox() {
   return (
     <>
       <h2>↓チェックボックスの値を配列として表示↓</h2>
+      <h3>得意なキャラクター（ジャンル別）※複数可</h3>
       <label>
         <input
           type="checkbox"
-          value="js"
+          value="duel"
           onChange={handleChange}
-          checked={val.includes("js")}
+          checked={val.includes("duel")}
         />
-        JavaScript
+        デュエリスト
       </label>
       <label>
         <input
           type="checkbox"
-          value="python"
+          value="ctr"
           onChange={handleChange}
-          checked={val.includes("python")}
+          checked={val.includes("ctr")}
         />
-        Python
+        コントローラー
       </label>
       <label>
         <input
           type="checkbox"
-          value="java"
+          value="inis"
           onChange={handleChange}
-          checked={val.includes("java")}
+          checked={val.includes("inis")}
         />
-        Java
+        イニシエーター
+      </label>{" "}
+      <label>
+        <input
+          type="checkbox"
+          value="sent"
+          onChange={handleChange}
+          checked={val.includes("sent")}
+        />
+        センチネル
       </label>
       <p>選択値：{val.join(", ")}</p>
     </>

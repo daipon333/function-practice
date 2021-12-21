@@ -1,7 +1,7 @@
 import React from "react";
 
 function RadioButton() {
-  const [val, setVal] = React.useState("meat");
+  const [val, setVal] = React.useState("vandal");
 
   const handleChange = (e) => {
     setVal(e.target.value);
@@ -10,23 +10,24 @@ function RadioButton() {
     <>
       <div>
         <h2>↓ラジオボタンで選択した値を表示↓</h2>
+        <h3>あなたはどっち派？</h3>
         <label>
           <input
             type="radio"
-            value="beauty"
+            value="vandal"
             onChange={handleChange}
-            checked={val === "beauty"}
+            checked={val === "vandal"}
           />
-          綺麗派
+          ヴァンダル派
         </label>
         <label>
           <input
             type="radio"
-            value="cute"
+            value="phantom"
             onChange={handleChange}
-            checked={val === "cute"}
+            checked={val === "phantom"}
           />
-          可愛い派
+          ファントム派
         </label>
       </div>
 
